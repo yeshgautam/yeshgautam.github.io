@@ -11,4 +11,4 @@ layout: default
 [Read my essays](/blog/)
 
 ## Projects
-- [My GitHub](https://github.com/yeshgautam)
+- [BraveVoice](https://bravevoice.app/)
