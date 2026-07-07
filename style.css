@@ -269,6 +269,13 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 
+.card-meta a,
+.card-desc a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+}
+
 /* ---------- book log (clickable reading card) ---------- */
 
 .book-card {
