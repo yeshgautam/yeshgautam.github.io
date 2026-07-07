@@ -269,6 +269,80 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 
+/* ---------- book log (clickable reading card) ---------- */
+
+.book-card {
+  padding: 0;
+  cursor: pointer;
+}
+
+.book-card summary {
+  list-style: none;
+  padding: 20px 22px;
+  position: relative;
+}
+
+.book-card summary::-webkit-details-marker { display: none; }
+
+.book-card summary::after {
+  content: "+";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.book-card[open] summary::after { content: "\2212"; }
+
+.book-card[open] summary {
+  border-bottom: 1px dashed var(--rule);
+}
+
+.book-log {
+  padding: 16px 22px 20px;
+}
+
+.book-log-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+}
+
+.book-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.book-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--rule);
+  font-size: 0.95rem;
+}
+
+.book-list li:last-child { border-bottom: none; }
+
+.book-list-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.book-log-note {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
 /* ---------- empty state ---------- */
 
 .empty-state {
