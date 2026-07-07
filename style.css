@@ -350,6 +350,54 @@ a { color: inherit; }
   margin: 0;
 }
 
+/* ---------- art cards (clickable image + description) ---------- */
+
+.art-card {
+  padding: 0;
+  cursor: pointer;
+}
+
+.art-card summary {
+  list-style: none;
+  padding: 16px 16px 14px;
+  position: relative;
+}
+
+.art-card summary::-webkit-details-marker { display: none; }
+
+.art-card summary::after {
+  content: "+";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.art-card[open] summary::after { content: "\2212"; }
+
+.art-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  margin: 10px 0 6px;
+}
+
+.art-desc {
+  padding: 0 16px 20px;
+}
+
+.art-desc p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.art-desc p:last-child { margin-bottom: 0; }
+
 /* ---------- empty state ---------- */
 
 .empty-state {
